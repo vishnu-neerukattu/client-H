@@ -21,4 +21,4 @@ JOIN
 MSD_Account_G A
 ON
 FS.SAPAccountId = A.SAPAccountId
- and FS.MarketCode = A.MarketOrganization
+ and FS.MarketCode = A.MarketOrganizationSFGSDFG 
