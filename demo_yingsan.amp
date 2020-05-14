@@ -1,0 +1,24 @@
+Select AccountKey,
+FleetRenewalScoring,
+/*Adding 6 hours to originally imported datetime to revert unwanted UTC timezone conversion in MC*/
+DATEADD(hour, 6, LastContractRenewalDate) AS LastContractRenewalDate,
+NetSalesFromFleetPercentage,
+NumberOfActiveFleetTools,
+NumberOfLostL12M,
+NumberOfRepairsL12M,
+NumberOfReplacementsL12M,
+NumberOfTheftsL12M,
+PercentageTotalFleet,
+RepairsPercentage,
+RepairsSavingsL12M,
+RepairsSavingsPercentage,
+RepairsVsTheftsPriority,
+ReplacementSavingsL12M,
+StolenPercentage
+FROM
+MSD_MDPImport_FleetStatistic FSgsdfg
+JOIN
+MSD_Account_G A
+ON
+FS.SAPAccountId = A.SAPAccountId
+ and FS.MarketCode = A.MarketOrganization
