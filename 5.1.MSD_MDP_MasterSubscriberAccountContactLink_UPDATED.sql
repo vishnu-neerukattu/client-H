@@ -7,7 +7,7 @@ SELECT r.AccountKey
            A.AccountKey
          , C.ContactKey
          , A.CountryCode
-         , ACR.MarketCode
+         , ACR.MarketCodeasdfasdfasdf
          , A.ShortIndustryCode
          , A.CustomerClassification
          , CASE
